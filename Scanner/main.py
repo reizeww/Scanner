@@ -4,7 +4,7 @@ from PIL import Image, ImageTk
 import cv2
 import pytesseract
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
 
 allowed_plate_numbers = ['H283TX 37', 'H283TX37', 'QWE456']
 
@@ -24,8 +24,8 @@ def carplate_extract(image, carplate_haar_cascade):
 
 
 def enlarge_img(image, scale_percent):
-    width = int(image.shape[1] * scale_percent / 60)
-    height = int(image.shape[0] * scale_percent / 60)
+    width = int(image.shape[1] * scale_percent / 100)
+    height = int(image.shape[0] * scale_percent / 100)
     dim = (width, height)
     resized_image = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
     return resized_image
