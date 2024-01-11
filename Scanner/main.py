@@ -78,7 +78,7 @@ class CarPlateApp(tk.Tk):
 
         self.cap = None
         self.carplate_haar_cascade = cv2.CascadeClassifier(
-            'C:/Users/vlad/Desktop/caranumberr/haar_cascades/haarcascade_russian_plate_number.xml')
+            'haar_cascades/haarcascade_russian_plate_number.xml')
 
         self.start_camera()
 
